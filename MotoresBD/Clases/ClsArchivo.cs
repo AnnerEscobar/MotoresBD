@@ -12,6 +12,11 @@ namespace MotoresBD.Clases
 {
     class ClsArchivo
     {
+        /// <summary> 
+        /// Metodo por el cual se carga el archivo a sql server enviandole como parametro del archivo y la ruta de la conexion.
+        /// </summary>
+        /// <param name="rutaArchivo"></param>
+        /// <param name="rutaConexion"></param>
         public void CArgarARchivo(string rutaArchivo, string rutaConexion)
         {
             try
@@ -46,6 +51,11 @@ namespace MotoresBD.Clases
         }
 
 
+        /// <summary>
+        /// Metodo que Cargando carga el archivo a MySql enviandole como parametro la ruta del archivo y la ruta de conexion a mysql por medio de strings
+        /// </summary>
+        /// <param name="rutaArchivo"></param>
+        /// <param name="rutaConexion"></param>
         public void CArgarARchivoMysql(string rutaArchivo, string rutaConexion)
         {
             try
@@ -66,14 +76,8 @@ namespace MotoresBD.Clases
                         cmd.CommandText = sql;
                         cmd.CommandType = System.Data.CommandType.Text;
                         cmd.Connection = MySql;
-                        try
-                        {
-                            cmd.ExecuteNonQuery();
-                        }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show("No se puede cargar Pues hay repetidos en la clave primaria");
-                        }
+                        cmd.ExecuteNonQuery();
+                        
                     }
                     contador++;
                 }
