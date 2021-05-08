@@ -42,11 +42,11 @@ namespace MotoresBD.Clases
                     contador++;
                 }
                 sqll.Close();
-                MessageBox.Show(@"ARCHIVOS CARGADOS CORRECTAMENTE A LA DATABASE");
+                MessageBox.Show(@"ARCHIVOS CARGADOS CORRECTAMENTE A LA BASE");
             }
             catch (Exception e)
             {
-                MessageBox.Show("ERROR AL CARGAR TU ARCHIVO A LA DATABASE");
+                MessageBox.Show("ERROR AL CARGAR ARCHIVO");
             }
         }
 
@@ -82,11 +82,11 @@ namespace MotoresBD.Clases
                     contador++;
                 }
                 MySql.Close();
-                MessageBox.Show(@"ARCHIVOS CARGADOS CORRECTAMENTE A LA DATABASE");
+                MessageBox.Show(@"ARCHIVOS CARGADOS CORRECTAMENTE A LA BASE");
             }
             catch (Exception e)
             {
-                MessageBox.Show("ERROR AL CARGAR TU ARCHIVO A LA DATABASE");
+                MessageBox.Show("ERROR AL CARGAR ARCHIVO");
             }
         }
 
