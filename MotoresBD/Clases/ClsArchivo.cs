@@ -72,7 +72,7 @@ namespace MotoresBD.Clases
 
                         var values = line.Split(';');
                         var sql = "INSERT INTO Alumnos VALUES (" + values[0] + ", '" + values[1] + "', " + values[2] + ", " + values[3] + ", " + values[4] + ", '" + values[5] + "')";
-                        var cmd = new MySqlCommand();
+                        MySqlCommand cmd = new MySqlCommand();
                         cmd.CommandText = sql;
                         cmd.CommandType = System.Data.CommandType.Text;
                         cmd.Connection = MySql;

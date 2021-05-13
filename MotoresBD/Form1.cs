@@ -69,7 +69,7 @@ namespace MotoresBD
         private void button8_Click(object sender, EventArgs e)
         {
             string NombreBusqueda = textBox1.Text;
-            Consultas.Consultas($"SELECT Nombre, [pacial 1], [Parcial 2],[Parcial 3] FROM TbAlumnos Where Nombre = '{NombreBusqueda}'", conn, dataGridView1);
+            Consultas.Consultas($"Select Nombre,[Pacial 1],[Parcial 2],[Parcial 3] from TbAlumnos where Nombre like('%{textBox1.Text}%')",conn,dataGridView1);
         }
     }
 }
